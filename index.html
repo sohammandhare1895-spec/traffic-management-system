@@ -13,7 +13,7 @@
 <div class="app" id="app">
   <!-- HEADER -->
   <header class="header">
-  <div>
+    <div>
       <p class="eyebrow"><i class="fas fa-robot"></i> AI TRAFFIC MANAGEMENT</p>
       <h1>CityFlow <span style="color:var(--blue);">·</span> Nexus</h1>
       <p class="subtitle"><i class="fas fa-video" style="margin-right:8px;"></i>Live intersection · 4K AI feed</p>
@@ -39,10 +39,15 @@
             <span class="recording-badge" id="recBadge" style="display:inline-block;position:static;margin-left:10px;animation:blink 1s infinite;"><i class="fas fa-circle"></i> REC</span>
           </div>
         </div>
+        
+        <!-- ── VIDEO PLAYER ADDED HERE ── -->
         <div class="video-wrapper" id="videoWrapper">
-          <video id="cctvFeed" autoplay muted playsinline></video>
+          <video id="cctvFeed" controls playsinline>
+            <source src="https://www.image2url.com/r2/default/videos/1786680007670-d609895f-eb5f-4b3f-98e6-176a8727c086.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
           <canvas id="overlayCanvas"></canvas>
-          <div class="loading" id="loadingOverlay"><i class="fas fa-spinner fa-pulse fa-2x"></i> <span style="margin-left:12px;">acquiring stream …</span></div>
+          <div class="loading" id="loadingOverlay"><i class="fas fa-spinner fa-pulse fa-2x"></i> <span style="margin-left:12px;">loading stream …</span></div>
           <div class="motion-indicator" id="motionIndicator"><i class="fas fa-running"></i> MOTION</div>
         </div>
 
